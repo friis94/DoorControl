@@ -50,12 +50,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DoorControlUnitTest.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="FakeAlarm.cs" />
+    <Compile Include="FakeDoor.cs" />
+    <Compile Include="FakeEntryNotify.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="FakeUserValidate.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DoorControl\DoorControl.csproj">
+      <Project>{98edc790-807e-407d-9265-4c81faa3cfa0}</Project>
+      <Name>DoorControl</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
