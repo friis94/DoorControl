@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace DoorControl
 {
-    interface EntryNotification
+    interface IEntryNotification
     {
+        bool NotifyEntryGranted();
+        bool NotifyEntryDenied();
     }
 }
