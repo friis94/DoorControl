@@ -44,7 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DoorControl.cs" />
-    <Compile Include="EntryNotification.cs" />
+    <Compile Include="IEntryNotification.cs" />
     <Compile Include="IAlarm.cs" />
     <Compile Include="IDoor.cs" />
     <Compile Include="IUserValidation.cs" />

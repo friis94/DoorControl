@@ -8,5 +8,7 @@ namespace DoorControl
 {
     interface IDoor
     {
+        bool Open();
+        bool Close();
     }
 }
