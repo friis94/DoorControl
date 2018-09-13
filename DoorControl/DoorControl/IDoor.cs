@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DoorControl
 {
-    interface IDoor
+    public interface IDoor
     {
         bool Open();
         bool Close();

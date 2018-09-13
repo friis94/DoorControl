@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DoorControl
 {
-    interface IUserValidation
+    public interface IUserValidation
     {
         bool ValidateEntryRequest(int id);
 
