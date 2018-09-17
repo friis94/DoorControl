@@ -9,5 +9,17 @@ namespace DoorControl.Unit.Test
 {
     class FakeEntryNotify : IEntryNotification
     {
+
+        public bool NotifyEntryGranted()
+        {
+            return true;
+        }
+
+
+        public bool NotifyEntryDenied()
+        {
+            return true;
+        }
+
     }
 }

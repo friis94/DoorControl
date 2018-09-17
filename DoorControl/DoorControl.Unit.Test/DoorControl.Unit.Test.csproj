@@ -53,6 +53,7 @@
     <Compile Include="FakeAlarm.cs" />
     <Compile Include="FakeDoor.cs" />
     <Compile Include="FakeEntryNotify.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="FakeUserValidate.cs" />
   </ItemGroup>

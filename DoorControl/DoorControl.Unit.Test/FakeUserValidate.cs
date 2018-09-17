@@ -9,5 +9,11 @@ namespace DoorControl.Unit.Test
 {
     class FakeUserValidate : IUserValidation
     {
+
+        public bool ValidateEntryRequest(int id)
+        {
+            return true;
+        }
+
     }
 }

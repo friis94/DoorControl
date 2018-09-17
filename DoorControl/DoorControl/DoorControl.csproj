@@ -43,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DoorControl.cs" />
+    <Compile Include="DoorController.cs" />
     <Compile Include="IEntryNotification.cs" />
     <Compile Include="IAlarm.cs" />
     <Compile Include="IDoor.cs" />
