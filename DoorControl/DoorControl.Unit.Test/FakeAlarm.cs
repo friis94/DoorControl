@@ -6,10 +6,7 @@ using System.Threading.Tasks;
 
 namespace DoorControl.Unit.Test
 {
-    class Program
+    class FakeAlarm : IAlarm
     {
-        static void Main(string[] args)
-        {
-        }
     }
 }
