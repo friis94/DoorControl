@@ -8,11 +8,17 @@ namespace DoorControl
 {
     public delegate void MyDel();
     public delegate void MyDel2();
+
+
+    public class DoorChangedEventArgs : EventArgs
+    {
+        public bool DoorOpen { get; set; }
+    }
+
     public interface IDoor
     {
-        
-        event MyDel DoorClosed;
-        event MyDel2 DoorOpened;
+
+        event EventHandler<DoorChangedEventArgs> DoorChangedEvent;
 
         void Open();
         void Close();

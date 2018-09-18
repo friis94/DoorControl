@@ -12,7 +12,8 @@ namespace DoorControl
         public IDoor _door;
         public IEntryNotification _entryNotification;
         public IUserValidation _userValidation;
-        
+        public event EventHandler OpenDoorEvent;
+        public event EventHandler CloseDoorEvent;
 
 
 
@@ -20,21 +21,24 @@ namespace DoorControl
         {
             _alarm = alarm;
             _door = door;
-            _door.DoorClosed += _door_DoorClosed;
-            _door.DoorOpened += _door_DoorOpened;
             _entryNotification = entryNotification;
             _userValidation = userValidation;
+            door.DoorChangedEvent += HandleDoorChanged;
         }
 
-        private void _door_DoorOpened()
+        public void HandleDoorChanged(object source, DoorChangedEventArgs args)
         {
-            this.DoorOpen();
+            if (args.DoorOpen)
+            {
+                this.DoorOpen();
+            }
+            else
+            {
+                this.DoorClosed();
+            }
         }
 
-        private void _door_DoorClosed()
-        {
-            this.DoorClosed();
-        }
+
 
 
 
@@ -52,9 +56,9 @@ namespace DoorControl
 
       
 
-        void DoorOpen()
+        public void DoorOpen()
         {
-
+            OpenDoorEvent?.Invoke(this, EventArgs.Empty);
         }
 
         void DoorClosed()
