@@ -10,5 +10,8 @@ namespace DoorControl.Unit.Nsub.Test
     [TestFixture]
     class TestClass
     {
+        private DoorController _uut;
+
+
     }
 }
