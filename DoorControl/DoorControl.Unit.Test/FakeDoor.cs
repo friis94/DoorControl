@@ -10,6 +10,8 @@ namespace DoorControl.Unit.Test
     {
         public event MyDel DoorClosed;
         public event MyDel2 DoorOpened;
+        public event EventHandler<DoorChangedEventArgs> DoorChangedEvent;
+
         public int hasDoorBeenOpened = 0;
         public int hasDoorBeenClosed = 0;
 
